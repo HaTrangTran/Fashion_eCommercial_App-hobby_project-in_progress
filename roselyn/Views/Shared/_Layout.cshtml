@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ROSÉLYN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <header>
+        <div class="upper-nav">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" title="Stores" asp-area="" asp-controller="Home" asp-action="Index">Stores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" title="Contact Us" asp-area="" asp-controller="Home" asp-action="Privacy">Contact Us</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-inner-text">Rosélyn Official Online Store</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" title="Sign in / Register" asp-area="" asp-controller="Home" asp-action="Index">Sign in / Register</a>
+                            </li>
+                            <li class="nav-item wishlist">
+                                <a class="nav-link wishlist-icon" asp-area="" asp-controller="Home" asp-action="Privacy"><i class="far fa-heart" style="color: #242424"></i></a>
+                                <div class="dropdown-content-wishlist">
+                                    <div class="h6 wishlist-title">CREATE YOUR OWN WISHLIST</div>
+                                    <div class="wishlist-bottom">
+                                        <p class="wishlist-innertext">REGISTER or SIGN IN to save the items for more than 30 days</p>
+                                    </div>
+                                    <div class="wishlist-signin-button">
+                                        <div class="signin-button">
+                                            <p class="signin-button-text">REGISTER / SIGN IN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" title="Bag" asp-area="" asp-controller="Home" asp-action="Privacy">Bag</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="header-logo">
+            <div class="container">
+                <a class="brand" asp-area="" asp-controller="Home" asp-action="Index">ROSÉLYN</a>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <div class="site-wrapper navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark category" asp-area="" asp-controller="Home" asp-action="Index">Dresses</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark category" asp-area="" asp-controller="Home" asp-action="Privacy">Corsets</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark category" asp-area="" asp-controller="Home" asp-action="Index">Tops / Cardigans</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark category" asp-area="" asp-controller="Home" asp-action="Privacy">Pants / Skirts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search">
+                    <i class="fas fa-search" style="font-size:25px"></i>
+                    <div class="dropdown-content-search">
+                        <input id="email-signup" class="email-input" type="text" placeholder="Search" />
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer @*text-muted*@">
+        <div class="enter-email">
+            <div class="container">
+                <div class="h5 footer-email-title">JOIN THE WORLD OF ROSÉLYN</div>
+                <p class="footer-email-desc">To get infomation about exclusive events and new collections.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-email-int-field">
+                            <input id="email-signup" class="email-input" type="text" placeholder="Enter your email" />
+                            <button type="submit" class="icon-arrow-right">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4 socialmedia-icon instagrom-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="col-md-4 socialmedia-icon fb-icon">
+                                <i class="fab fa-facebook-square"></i>
+                            </div>
+                            <div class="col-md-4 socialmedia-icon youtube-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-logo">
+                <a class="brand" asp-area="" asp-controller="Home" asp-action="Index">ROSÉLYN</a>
+            </div>
+            <div class="copy-right">
+                &copy; 2021 - ROSÉLYN @*- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>*@
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
